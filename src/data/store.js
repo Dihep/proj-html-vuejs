@@ -246,7 +246,23 @@ const iMieiDati = reactive({
             Sottotitolo: '4 Listings'
         },
     ],
-
+    // Header data
+    headerData: {
+        navbarLinks: [
+            `Home`,
+            `Home`,
+            `Home`,
+            `Home`,
+            `Home`,
+            `Home`,
+            `Home`
+        ],
+        navbarPhoneNumber: `+1 (234) 567 89 10`,
+        offCanvas: {
+            offCanvasLogo: `logo-autocar11.png`
+        }
+    }
+    
 });
 
 export default iMieiDati
