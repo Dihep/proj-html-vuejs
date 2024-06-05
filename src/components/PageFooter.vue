@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-    
+    <AutocarFooter/>
 </template>
 
 <style scoped>
