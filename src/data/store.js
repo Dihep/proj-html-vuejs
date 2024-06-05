@@ -258,9 +258,7 @@ const iMieiDati = reactive({
             `Home`
         ],
         navbarPhoneNumber: `+1 (234) 567 89 10`,
-        offCanvas: {
-            offCanvasLogo: `logo-autocar11.png`
-        }
+        navbarLogo: `logo-autocar11.png`
     }
     
 });
