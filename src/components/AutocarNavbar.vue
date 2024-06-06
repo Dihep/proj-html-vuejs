@@ -30,8 +30,8 @@ export default {
                 <img :src="getImg(store.navbarLogo)" alt="">
             </div>
             <ul>
-                <li v-for="link in store.headerData.navbarLinks">
-                    {{ link }}
+                <li v-for="item in store.headerData.navbarLinks">
+                    <a :href="item.link">{{ item.text }}</a>
                 </li>
             </ul>
             <div id="navButtons">
@@ -62,22 +62,22 @@ export default {
 nav {
     background-color: white;
 }
-
+a {
+    text-decoration: none;
+    color: black;
+}
 #navContent {
     height: 5rem;
     gap: 0.3rem;
     justify-content: space-between;
     font-weight: 600;
 }
-
 #navLogo {
     width: 15%;
 }
-
 #navLogo img {
     height: 3rem;
 }
-
 #navButtons {
     display: flex;
     gap: 0.8rem;

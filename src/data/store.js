@@ -253,16 +253,15 @@ const iMieiDati = reactive({
     footerLogo: `logo-footer-autocar11.png`,
 
     headerData: {
-        navbarLinks:
-            [
-                `Home`,
-                `About Us`,
-                `Vehicles`,
-                `Dealers`,
-                `Packages`,
-                `Blog`,
-                `Contact`
-            ]
+        navbarLinks: [
+                {text: `Home`, link: `https://example.com`},
+                {text: `About Us`, link: `https://example.com`},
+                {text: `Vehicles`, link: `https://example.com`},
+                {text: `Dealers`, link: `https://example.com`},
+                {text: `Packages`, link: `https://example.com`},
+                {text: `Blog`, link: `https://example.com`},
+                {text: `Contact`, link: `https://example.com`}
+        ]
     },
 
 
