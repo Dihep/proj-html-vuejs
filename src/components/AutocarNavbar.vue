@@ -30,22 +30,27 @@ export default {
                 <img :src="getImg(store.navbarLogo)" alt="">
             </div>
             <ul>
-                <li v-for="link in store.headerData.navbarLinks">  
+                <li v-for="link in store.headerData.navbarLinks">
                     {{ link }}
                 </li>
             </ul>
-            <div id="navMyAccount" class="navButton"> 
-                <img src="../assets/Icone/padlock.png" alt="">
-                My Account
-            </div>
-            <div id="navAddCar" class="navButton">
-                <img src="../assets/Icone/add.png" alt="">
-                Add Car
-            </div>
-            <!-- Offcanvas -->
-            <div id="navPhoneNumber" class="navButton">
-                <img src="../assets/Icone/padlock.png" alt="">
-                {{store.headerData.navbarPhoneNumber}}
+            <div id="navButtons">
+                <div id="navMyAccount" class="navButton">
+                    <img src="../assets/Icone/padlock.png" alt="">
+                    My Account
+                </div>
+                <div id="navAddCar" class="navButton">
+                    <img src="../assets/Icone/add.png" alt="">
+                    Add Car
+                </div>
+                <!-- Offcanvas -->
+                <div id="offcanvas">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+                <div id="navPhoneNumber" class="navButton">
+                    <img src="../assets/Icone/headphones.png" alt="">
+                    {{ store.footerData.autocarInfo.acPhone.text }}
+                </div>
             </div>
         </div>
 
@@ -57,41 +62,59 @@ export default {
 nav {
     background-color: white;
 }
+
 #navContent {
     height: 5rem;
-    gap: 0.2rem;
+    gap: 0.3rem;
     justify-content: space-between;
+    font-weight: 600;
 }
 
 #navLogo {
     width: 15%;
 }
+
 #navLogo img {
     height: 3rem;
 }
 
+#navButtons {
+    display: flex;
+    gap: 0.8rem;
+}
 .navButton {
     background-color: black;
     color: white;
-    font-size: 0.8rem;
-    max-height: 3rem;
+    font-size: 1rem;
     border-radius: 0.2rem;
-    padding: 0.8rem 0;
+    padding: 0.6rem 0.5em;
 }
 .navButton img {
     height: 1.5rem;
     filter: invert(1);
-}
-
-li {
-    display: inline-block;
-    margin: 0 0.2rem;
-    font-size: 0.8rem;
-    color: black;
+    margin-right: 0.5rem;
 }
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Stili offcanvas */
+#offcanvas {
+    height: 3rem;
+    color: black;
+    font-size: 2rem;
+    padding: 0 0.6rem;
+}
+#offcanvas i {
+    position: relative;
+    bottom: 5%;
 }
 </style>

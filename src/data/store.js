@@ -256,12 +256,12 @@ const iMieiDati = reactive({
         navbarLinks:
             [
                 `Home`,
-                `Home`,
-                `Home`,
-                `Home`,
-                `Home`,
-                `Home`,
-                `Home`
+                `About Us`,
+                `Vehicles`,
+                `Dealers`,
+                `Packages`,
+                `Blog`,
+                `Contact`
             ]
     },
 
