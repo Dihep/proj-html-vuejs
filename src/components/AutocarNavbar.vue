@@ -27,7 +27,7 @@ export default {
 
         <div id="navContent" class="w-75 mx-auto d-flex align-items-center">
             <div id="navLogo">
-                <img :src="getImg(store.headerData.navbarLogo)" alt="">
+                <img :src="getImg(store.navbarLogo)" alt="">
             </div>
             <ul>
                 <li v-for="link in store.headerData.navbarLinks">  
@@ -58,9 +58,9 @@ nav {
     background-color: white;
 }
 #navContent {
-    border: 1px dashed red;
     height: 5rem;
     gap: 0.2rem;
+    justify-content: space-between;
 }
 
 #navLogo {
@@ -87,6 +87,7 @@ li {
     display: inline-block;
     margin: 0 0.2rem;
     font-size: 0.8rem;
+    color: black;
 }
 ul {
     list-style: none;
