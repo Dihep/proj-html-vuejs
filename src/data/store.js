@@ -41,7 +41,7 @@ const iMieiDati = reactive({
         {
             marchio: 'Seat',
             modello: 'Seat Arona',
-            tipo: 'Suv',
+            tipo: 'SUV',
             prezzo: '60.000',
             carburante: 'Gasoline',
             immagine: 'makyajli-2022-seat-arona-1-400x300.jpg',
@@ -75,6 +75,8 @@ const iMieiDati = reactive({
             heart: false,
         },
     ],
+
+    // DAVIDE
     customer: {
         title: "What Are Our Customer Saying ?",
         subtitle: "Opinion from our Happy Customers.",
@@ -161,6 +163,8 @@ const iMieiDati = reactive({
             },
         ],
     },
+
+    //LUCA
     CaroselloTitolo: 'Buy And Sell Your Car At Its Value',
     CaroselloSottotitolo: 'Find the right price and dealer.',
     Carosello: [
