@@ -45,15 +45,15 @@ export default {
                 </div>
 
                 <!-- Offcanvas trigger-->
-                <button id="offcanvasTrigger" data-bs-toggle="offcanvas" data-bs-target="offcanvas"
+                <button id="offcanvasTrigger" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
                     aria-controls="offcanvasExample">
                     <i class="fa-solid fa-bars-staggered"></i>
-            </button>
+                </button>
                 <!-- Offcanvas-->
                 <div id="offcanvas" class="offcanvas offcanvas-start" tabindex="-1" aria-labelledby="offcanvasLabel">
                     <div id="offcanvasContent">
                         <img id="offcanvasLabel" :src="getImg(store.navbarLogo)" alt="">
-                        <H1>Contact Information</H1>
+                        <h1>Contact Information</h1>
                         <div class="offcanvasDetail">
                             <i class="fa-solid fa-phone-volume"></i>
                             <span>{{ store.footerData.autocarInfo.acPhone.text }}</span>
@@ -71,6 +71,10 @@ export default {
                                 <i :class="social.icon"></i>
                             </a>
                         </div>
+                        <p id="offcanvasCredits">
+                            <i class="fa-regular fa-copyright"></i>
+                            {{ store.footerData.pageCredits }}
+                        </p>
                     </div>
                 </div>
 
@@ -148,19 +152,77 @@ li {
     color: black;
     font-size: 2rem;
     padding: 0 0.6rem;
+    border: none;
+    background-color: white;
+    box-shadow: none;
 }
 
-#offcanvas i {
+#offcanvasTrigger i {
     position: relative;
     bottom: 5%;
 }
+
 #offcanvasContent {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    color: black;
+    align-content: center;
 }
-.offcanvasdetail {
+
+#offcanvasContent h1 {
+    font-weight: 600;
+    padding: 0 1rem;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+#offcanvasContent img {
+    width: 75%;
+    margin: 0.5rem auto 0;
+}
+
+.offcanvasDetail {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
+    justify-content: flex-end;
+}
+
+.offcanvasDetail i {
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+#offCanSocials {
+    display: flex;
+    justify-content: center;
+}
+
+#offCanSocials a {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    margin: 0 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#offCanSocials i {
+    font-size: 1.5rem;
+    color: black;
+}
+
+#offcanvasCredits {
+    text-align: center;
+    font-size: 0.8rem;
 }
 </style>
